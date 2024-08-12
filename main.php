@@ -68,7 +68,7 @@ function login($uname, $password)
         }
         
     } else {
-        echo '<p style = "color: red;"> User does not exists </p>';
+        echo '<span style = "color: red;"> User does not exists </span>';
         echo '<a href="./templates/login.html">Back</a>';
     }
 }
