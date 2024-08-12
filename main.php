@@ -12,9 +12,8 @@ function register($uname, $email, $password, $con_password)
 
     // Password validation
     if ($password != $con_password) {
-        echo '<p style = "color: red;"> Passwords do not match </p>';
-        echo '<a href="./templates/register.html">Back</a>';
-        return;
+        header("location: ./templates/register.php?error=passworddoesnotmatch");
+        exit();
     }
 
     //Check if the directory exists and is writable
